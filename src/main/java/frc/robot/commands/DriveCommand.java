@@ -11,8 +11,8 @@ import frc.robot.subsystems.Drive;
 public class DriveCommand extends CommandBase {
     private final Drive drive;
 
-    float rightWheelSpeed = 0.1f;
-
+    float driveSpeed = 0.3f; // Back right wheel speed
+    // instantiate the PS4 Controller
     PS4Controller PS4Cont = new PS4Controller(0);
     
     public DriveCommand(Drive drive) {
@@ -22,7 +22,9 @@ public class DriveCommand extends CommandBase {
     }
     @Override
     public void execute() {
-        rightWheelSpeed = PS4Cont.getSquareButton() ? 0.1f : 0;
-        drive.setOpenLoop(0, 0, rightWheelSpeed, 0);
+        drive.setOpenLoop(PS4Cont.getLeftY() * driveSpeed,
+                          PS4Cont.getRightY() * driveSpeed,
+                          PS4Cont.getLeftY() * driveSpeed,
+                          PS4Cont.getRightY() * driveSpeed);
     }
 }
