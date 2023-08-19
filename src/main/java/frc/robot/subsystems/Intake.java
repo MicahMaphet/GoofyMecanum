@@ -6,15 +6,18 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Intake extends SubsystemBase {
-    private final CANSparkMax intakeVerticlePivot = new CANSparkMax(7, MotorType.kBrushless);
-    private double direction = 0;
-
-    public Intake() {
-
-    }
-
-    public void setDirection(double verticleDirection) {
-        intakeVerticlePivot.set((verticleDirection - direction) * 0.1);
-    }
+    private final CANSparkMax intakeVerticlePivot;
     
+    public Intake() {
+        intakeVerticlePivot = new CANSparkMax(7, MotorType.kBrushless);
+    }
+
+    /*
+     * Sets the speed of the intake verticle pivot.
+     * This is only going to be used to test the intake, I will switch it to direction
+     * after I test this.
+     */
+    public void setPivotSpeed(double speed) {
+        intakeVerticlePivot.set(speed);
+    }   
 }
