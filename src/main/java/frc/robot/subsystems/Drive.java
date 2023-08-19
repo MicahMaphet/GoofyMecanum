@@ -23,9 +23,12 @@ public class Drive extends SubsystemBase{
         backLeftSpark.restoreFactoryDefaults();
         backRightSpark.restoreFactoryDefaults();
 
+        // Invert the left wheeles
         frontLeftSpark.setInverted(true);
         backLeftSpark.setInverted(true);
-    }
+    
+    }   
+
 
     @Override
     public void periodic() {
