@@ -8,7 +8,7 @@ public class IntakeCommand extends CommandBase {
     private final Intake intake;
 
     // Currently a low value for testing
-    private final double pivotSpeed = 0.025;
+    private final double pivotSpeed = 0.1;
 
     PS4Controller PS4Cont = new PS4Controller(0);
 
