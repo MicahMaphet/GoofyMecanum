@@ -7,7 +7,7 @@ import frc.robot.subsystems.Intake;
 public class IntakeCommand extends CommandBase {
     private final Intake intake;
 
-    // Currently a low value for testing
+    // moves the intake up
     private final double pivotSpeed = 0.1;
 
     PS4Controller PS4Cont = new PS4Controller(0);
