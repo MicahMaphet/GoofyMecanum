@@ -19,5 +19,5 @@ public class Intake extends SubsystemBase {
      */
     public void setPivotSpeed(double speed) {
         intakeVerticlePivot.set(speed);
-    }   
+    }
 }
